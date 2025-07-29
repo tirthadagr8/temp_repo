@@ -56,8 +56,8 @@ with tqdm(total=len(meta_df), desc='Downloading images') as pbar:
     pbar.update(len(image_filenames)) # Initialize progress bar to show already completed downloads
     for index, row in meta_df.iterrows():
 		
-		if index>=stop_index:
-		break
+	if index>=stop_index:
+	break
 		
         image_key = row['IMAGE_KEY']
 
