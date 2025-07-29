@@ -25,12 +25,10 @@ FORMAT_TO_EXTENSION = {
 # Dictionary to hold mapping from IMAGE_KEY to saved image filename
 image_filenames = {}
 
-stop_index = len(meta_df)//2
-
 # Step 4: Download and save each image
 for index, row in tqdm(meta_df.iterrows(), total=len(meta_df), desc='Downloading images'):
-    if index>=stop_index:
-        break
+    if index<=10732:
+        continue
     image_key = row['IMAGE_KEY']
     original_url = row['OriginalURL']
 
