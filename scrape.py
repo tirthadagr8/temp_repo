@@ -57,7 +57,7 @@ with tqdm(total=len(meta_df), desc='Downloading images') as pbar:
     for index, row in meta_df.iterrows():
 		
 	if index>=stop_index:
-	break
+		break
 		
         image_key = row['IMAGE_KEY']
 
